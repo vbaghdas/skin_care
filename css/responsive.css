@@ -117,6 +117,15 @@
     .reserv_form .form-group .col-xs-6:first-child{
         margin-bottom: 15px;
     }
+    #scroll-to-top {
+        display: none!important;
+    }
+    .main_slider .owl-nav div {
+        top: calc(94% - 60px);
+    }
+    .footer_widget_logo{
+        display: none;
+    }
 
 }
 /* ---- End of max-width 480px CSS ---- */
@@ -124,12 +133,7 @@
 
 /* ---- Start of max-width 420px CSS ---- */
 @media all and (max-width: 420px) {
-    #scroll-to-top {
-        display: none!important;
-    }
-    .main_slider .owl-nav div {
-        top: calc(94% - 60px);
-    }
+
 }
 /* ---- End of max-width 420px CSS ---- */
 
