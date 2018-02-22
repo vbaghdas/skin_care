@@ -8,40 +8,40 @@
     $("#app_submit").click(function(){
 
         //get input field values
-        var user_name = $('input[name=name]').val();
-        var user_email = $('input[name=email]').val();
-        var user_phone = $('input[name=phone]').val();
-        var user_time = $('input[name=time]').val();
-        var user_services = $('option[name=services]').val();
+        var user_name = $('#name').val();
+        var user_email = $('#email').val();
+        var user_phone = $('#phone').val();
+        var user_time = $('#time').val();
+        var user_services = $('#services').val();
         var url = "./php_mailer/mail_handler.php"; // the script where you handle the form input.
 
         //simple validation at client's end
         //we simply change border color to red if empty field using .css()
         var proceed = true;
         if (user_name == "" || user_name == " ") {
-            $('input[name=name]').css('border-color', '#fa225b');
+            $('#name').css('border-color', '#fa225b');
             proceed = false;
         }
         if (user_email == "" || user_name == " ") {
-            $('input[name=email]').css('border-color', '#fa225b');
+            $('#email').css('border-color', '#fa225b');
             proceed = false;
         }
         if (user_phone == "" || user_name == " ") {
-            $('input[name=phone]').css('border-color', '#fa225b');
+            $('#phone').css('border-color', '#fa225b');
             proceed = false;
         }
         if (user_time == "" || user_name == " ") {
-            $('input[name=time]').css('border-color', '#fa225b');
+            $('#time').css('border-color', '#fa225b');
             proceed = false;
         }
         if (user_services == "" || user_name == " ") {
-            $('option[name=services]').css('border-color', '#fa225b');
+            $('#services').css('border-color', '#fa225b');
             proceed = false;
         }
         var atpos = user_email.indexOf("@");
         var dotpos = user_email.lastIndexOf(".");
         if (atpos<1 || dotpos<atpos+2 || dotpos+2>=user_email.length) {
-            $('input[name=email]').css('border-color', '#fa225b');
+            $('#email').css('border-color', '#fa225b');
             proceed = false;
         }
 
