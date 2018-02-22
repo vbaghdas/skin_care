@@ -34,7 +34,7 @@
             $('input[name=time]').css('border-color', '#fa225b');
             proceed = false;
         }
-        if (user_service == "" || user_name == " ") {
+        if (user_services == "" || user_name == " ") {
             $('option[name=services]').css('border-color', '#fa225b');
             proceed = false;
         }
