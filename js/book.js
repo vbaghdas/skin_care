@@ -12,7 +12,6 @@
         var user_email = $('#email').val();
         var user_phone = $('#phone').val();
         var user_time = $('#time').val();
-        var user_services = $('#services').val();
         var url = "./php_mailer/mail_handler.php"; // the script where you handle the form input.
 
         //simple validation at client's end
@@ -34,10 +33,6 @@
             $('#time').css('border-color', '#fa225b');
             proceed = false;
         }
-        if (user_services == "" || user_name == " ") {
-            $('#services').css('border-color', '#fa225b');
-            proceed = false;
-        }
         var atpos = user_email.indexOf("@");
         var dotpos = user_email.lastIndexOf(".");
         if (atpos<1 || dotpos<atpos+2 || dotpos+2>=user_email.length) {
@@ -52,8 +47,7 @@
                 'userName': user_name,
                 'userEmail': user_email,
                 'usertime': user_time,
-                'userphone': user_phone,
-                'userservices': user_services
+                'userphone': user_phone
             };
             //Ajax post data to server
             $.ajax({
@@ -94,9 +88,4 @@
     $("#appointment_form #time").click(function(){
         $("#appointment_form #time").css('border-color', '');
     });
-
-    $("#appointment_form #service").click(function(){
-        $("#appointment_form #services").css('border-color', '');
-    });
-
 });

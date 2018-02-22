@@ -29,7 +29,7 @@ $mail->addReplyTo($visitor_email);
 $mail->isHTML(true);
 
 $mail->Subject = 'Kaliforniadoll - Appointment made by '.$name;
-$mail->Body    = $name.' wants to make an appointment for '.$services.' on '.$time.' . Customers phone number is '.$phone;
+$mail->Body    = $name.' wants to make an appointment on '.$time.' . Customers phone number is '.$phone;
 
 // Send an email
 if(!$mail->send()) {
