@@ -761,7 +761,6 @@ ul.list li:before{
     border-radius: 5px;
 }
 .book_section .default_btn {
-    margin-top: 15px;
     width: 100%;
 }
 
@@ -1567,3 +1566,18 @@ ul.list li:before{
     background-color: #222227;
     color: #fff;
 }
+
+/* ==========================================================================
+   18.0 Scroll To Top
+   ========================================================================== */
+.modal-dialog {
+    margin: 100px auto!important;
+}
+.modal-content {
+    background: rgba(255,255,255,.9)!important;
+}
+.modal-body > p {
+    text-align: center;
+    font-size: 16px;
+}
+  
