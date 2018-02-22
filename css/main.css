@@ -1406,7 +1406,6 @@ ul.list li:before{
     color: #ddd;
     font-size: 12px;
     text-transform: uppercase;
-    margin-left: 20px;
 }
 .footer_social li a:hover{
     color: #ffb6c1;
