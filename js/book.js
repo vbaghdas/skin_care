@@ -12,7 +12,7 @@
         var user_email = $('input[name=email]').val();
         var user_phone = $('input[name=phone]').val();
         var user_time = $('input[name=time]').val();
-        var user_services = $('select[name=services]').val();
+        var user_services = $('option[name=services]').val();
         var url = "./php_mailer/mail_handler.php"; // the script where you handle the form input.
 
         //simple validation at client's end
@@ -35,7 +35,7 @@
             proceed = false;
         }
         if (user_service == "" || user_name == " ") {
-            $('select[name=services]').css('border-color', '#fa225b');
+            $('option[name=services]').css('border-color', '#fa225b');
             proceed = false;
         }
         var atpos = user_email.indexOf("@");
