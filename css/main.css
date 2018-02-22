@@ -463,10 +463,9 @@ ul.nav li > ul li:hover > ul li > a:hover{
 }
 .slicknav_nav .slicknav_row, 
 .slicknav_nav a {
-    padding: 10px 15px;
+    padding: 10px 27px;
     margin: 0;
-    text-align: center;
-    color: #777;
+    color: #fff;
 }
 .slicknav_nav a .caret{
     display: none;
@@ -494,6 +493,7 @@ ul.nav li > ul li:hover > ul li > a:hover{
 .main_slide{
     background-repeat: no-repeat;
     -webkit-background-size: cover;
+    background-position: center;
     background-size: cover;
     height: 670px;
 }
@@ -761,6 +761,7 @@ ul.list li:before{
     border-radius: 5px;
 }
 .book_section .default_btn {
+    margin-top: 15px;
     width: 100%;
 }
 
@@ -1111,7 +1112,7 @@ ul.list li:before{
 .form-control{
     height: 45px;
     border: 1px solid #ddd;
-    border-radius: 3px;
+    border-radius: 0!important;
 }
 .comment_form{
     border: 1px solid #ddd;
@@ -1409,6 +1410,9 @@ ul.list li:before{
 }
 .footer_social li a:hover{
     color: #ffb6c1;
+}
+.footer_social li a i{
+    font-size: 18px;
 }
 
 

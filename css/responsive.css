@@ -124,7 +124,9 @@
 
 /* ---- Start of max-width 420px CSS ---- */
 @media all and (max-width: 420px) {
-    
+    #scroll-to-top {
+        display: none!important;
+    }
 }
 /* ---- End of max-width 420px CSS ---- */
 
