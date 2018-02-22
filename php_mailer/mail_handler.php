@@ -12,7 +12,7 @@ $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
 $visitor_email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
 $phone = filter_var($_POST["phone"], FILTER_SANITIZE_STRING);
 $time = filter_var($_POST["time"], FILTER_SANITIZE_STRING);
-$service = filter_var($_POST["service"], FILTER_SANITIZE_STRING);
+$services = filter_var($_POST["services"], FILTER_SANITIZE_STRING);
 
 $mail->Username = EMAIL_USER;
 $mail->Password = EMAIL_PASS;
@@ -29,7 +29,7 @@ $mail->addReplyTo($visitor_email);
 $mail->isHTML(true);
 
 $mail->Subject = 'Kaliforniadoll - Appointment made by '.$name;
-$mail->Body    = $name.' wants to make an appointment for '.$service.' on '.$time.' . Customers phone number is '.$phone;
+$mail->Body    = $name.' wants to make an appointment for '.$services.' on '.$time.' . Customers phone number is '.$phone;
 
 // Send an email
 if(!$mail->send()) {

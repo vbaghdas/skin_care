@@ -12,7 +12,7 @@
         var user_email = $('input[name=email]').val();
         var user_phone = $('input[name=phone]').val();
         var user_time = $('textarea[name=time]').val();
-        var user_service = $('textarea[name=service]').val();
+        var user_services = $('textarea[name=services]').val();
         var url = "./php_mailer/mail_handler.php"; // the script where you handle the form input.
 
         //simple validation at client's end
@@ -34,8 +34,8 @@
             $('textarea[name=time]').css('border-color', '#fa225b');
             proceed = false;
         }
-        if (user_service == "" || user_service == " ") {
-            $('textarea[name=service]').css('border-color', '#fa225b');
+        if (user_service == "" || user_name == " ") {
+            $('textarea[name=services]').css('border-color', '#fa225b');
             proceed = false;
         }
         var atpos = user_email.indexOf("@");
@@ -52,7 +52,8 @@
                 'userName': user_name,
                 'userEmail': user_email,
                 'usertime': user_time,
-                'userphone': user_phone
+                'userphone': user_phone,
+                'userservices': user_services
             };
             //Ajax post data to server
             $.ajax({
@@ -95,7 +96,7 @@
     });
 
     $("#appointment_form #service").click(function(){
-        $("#appointment_form #service").css('border-color', '');
+        $("#appointment_form #services").css('border-color', '');
     });
 
 });
