@@ -23,7 +23,7 @@ $mail->smtpConnect($options);
 
 $mail->From = $visitor_email;
 $mail->FromName = $name;
-$mail->addAddress('outlawstatus2@gmail.com', 'First Recipient');
+$mail->addAddress('skinbykandice@yahoo.com', 'Kandice Sullivan');
 $mail->addReplyTo($visitor_email);                          
 
 $mail->isHTML(true);
