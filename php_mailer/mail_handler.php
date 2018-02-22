@@ -4,7 +4,7 @@ require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 
 $mail = new PHPMailer;
-$mail->Host = 'smtp.yahoo.com';
+$mail->Host = 'smtp.gmail.com';
 $mail->isSMTP();
 $mail->SMTPAuth = true;         
 
@@ -23,7 +23,7 @@ $mail->smtpConnect($options);
 
 $mail->From = $visitor_email;
 $mail->FromName = $name;
-$mail->addAddress('outlawstatus3@gmail.com', 'Kandice Sullivan');
+$mail->addAddress('skinbykandice@yahoo.com', 'Kandice Sullivan');
 $mail->addReplyTo($visitor_email);                          
 
 $mail->isHTML(true);
