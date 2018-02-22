@@ -127,6 +127,9 @@
     #scroll-to-top {
         display: none!important;
     }
+    .main_slider .owl-nav div {
+        top: calc(94% - 60px);
+    }
 }
 /* ---- End of max-width 420px CSS ---- */
 
