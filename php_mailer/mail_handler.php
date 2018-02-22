@@ -12,7 +12,6 @@ $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
 $visitor_email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
 $phone = filter_var($_POST["phone"], FILTER_SANITIZE_STRING);
 $time = filter_var($_POST["time"], FILTER_SANITIZE_STRING);
-$services = filter_var($_POST["services"], FILTER_SANITIZE_STRING);
 
 $mail->Username = EMAIL_USER;
 $mail->Password = EMAIL_PASS;
