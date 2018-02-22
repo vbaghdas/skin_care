@@ -4,7 +4,7 @@ require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 
 $mail = new PHPMailer;
-$mail->Host = 'smtp.gmail.com';
+$mail->Host = 'smtp.yahoo.com';
 $mail->isSMTP();
 $mail->SMTPAuth = true;         
 
