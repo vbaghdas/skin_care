@@ -6,7 +6,7 @@ require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->Host = 'smtp.gmail.com';
 $mail->isSMTP();
-$mail->SMTPAuth = true;         
+$mail->SMTPAuth = true;
 
 $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
 $visitor_email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
@@ -16,7 +16,7 @@ $time = filter_var($_POST["time"], FILTER_SANITIZE_STRING);
 $mail->Username = EMAIL_USER;
 $mail->Password = EMAIL_PASS;
 
-$mail->SMTPSecure = 'tls';    
+$mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 $mail->smtpConnect($options);
 
