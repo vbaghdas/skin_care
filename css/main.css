@@ -1108,7 +1108,7 @@ ul.list li:before{
 
 /* Contact/Comment Forms 
 ==================== */
-.form-control{
+.form-control, .ui-datepicker{
     width: 100%;
     height: 45px;
     color: #888;
