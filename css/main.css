@@ -1193,18 +1193,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 input[type="date"] {
     appearance: none;
     -webkit-appearance: none;
-    color: #95a5a6;
-    font-family: "Helvetica", arial, sans-serif;
-    font-size: 44px;
-    border:1px solid #ecf0f1;
-    background:#ecf0f1;
-    padding:5px;
+    color: #ddd;
+    font-size: 14px;
+    height: 45px;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 5px;
     display: inline-block !important;
     visibility: visible !important;
 }
 
 input[type="date"], focus {
-    color: #95a5a6;
+    color: #555;
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
