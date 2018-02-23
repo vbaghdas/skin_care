@@ -430,29 +430,27 @@
         <!-- jQuery Datepicker UI -->
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
-            if (!Modernizr.touch || !Modernizr.inputtypes.date) {
-                $('input[type=date]')
-                    .attr('type', 'text')
-                    .datepicker({
-                        // Consistent format with the HTML5 picker
-                        dateFormat: 'yy-mm-dd',
-                        minDate: new Date(),
-                        beforeShowDay: function(date) {
-                            var day = date.getDay();
-                            var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-                            var array = ['2018-03-03', '2018-03-17', '2018-03-31'];
-                            if (day == 0 || day == 1 || day == 2 || day == 4){
-                                return [false];
-                            }
-                            else if(array.indexOf(string) != -1){
-                                return [false];
-                            }
-                            else{
-                                return [true];
-                            }
+            $('input[type=date]')
+                .attr('type', 'text')
+                .datepicker({
+                    // Consistent format with the HTML5 picker
+                    dateFormat: 'yy-mm-dd',
+                    minDate: new Date(),
+                    beforeShowDay: function(date) {
+                        var day = date.getDay();
+                        var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+                        var array = ['2018-03-03', '2018-03-17', '2018-03-31'];
+                        if (day == 0 || day == 1 || day == 2 || day == 4){
+                            return [false];
                         }
-                    });
-            }
+                        else if(array.indexOf(string) != -1){
+                            return [false];
+                        }
+                        else{
+                            return [true];
+                        }
+                    }
+                });
         </script>
 </body>
 </html>
