@@ -488,7 +488,8 @@
                     .attr('type', 'text')
                     .datepicker({
                         // Consistent format with the HTML5 picker
-                        dateFormat: 'yy-mm-dd'
+                        dateFormat: 'yy-mm-dd',
+                        minDate: new Date()
                     });
             }
         </script>
