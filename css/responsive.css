@@ -126,6 +126,9 @@
     .footer_widget_logo{
         display: none;
     }
+    #name {
+        margin-bottom: 15px;
+    }
 }
 /* ---- End of max-width 480px CSS ---- */
 
