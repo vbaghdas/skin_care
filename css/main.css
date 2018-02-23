@@ -1174,6 +1174,10 @@ ul.list li:before{
 .cf-wrapper textarea:-ms-input-placeholder{  
    color: #888 !important;  
 }
+input[type="date"]:not(.has-value):before{
+    color: lightgray;
+    content: attr(placeholder);
+  }
 
 /* Sidebar Widgets 
 ==================== */
