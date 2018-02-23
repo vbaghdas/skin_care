@@ -9,9 +9,10 @@ $mail->isSMTP();
 $mail->SMTPAuth = true;
 
 $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
-$visitor_email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
+// $visitor_email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
 $phone = filter_var($_POST["phone"], FILTER_SANITIZE_STRING);
 $time = filter_var($_POST["time"], FILTER_SANITIZE_STRING);
+$date = filter_var($_POST["date"], FILTER_SANITIZE_STRING);
 
 $mail->Username = EMAIL_USER;
 $mail->Password = EMAIL_PASS;
@@ -23,7 +24,7 @@ $mail->smtpConnect($options);
 $mail->From = $visitor_email;
 $mail->FromName = $name;
 $mail->addAddress('skinbykandice@yahoo.com', 'Kandice Sullivan');
-$mail->addReplyTo($visitor_email);                          
+// $mail->addReplyTo($visitor_email);                          
 
 $mail->isHTML(true);
 
@@ -43,9 +44,9 @@ $message .= "<tbody>
                 <tr>
                 <td colspan='4' style='padding:15px 30px; color: #333;'>
                     <p style='font-size: 14px; color: #333;'>Name: ".$name."</p>
+                    <p style='font-size: 14px; color: #333;'>Phone: ".$phone."</p>
                     <p style='font-size: 14px; color: #333;'>Time: ".$time."</p>
-                    <p style='font-size: 14px; color: #333;'>Phone:".$phone."</p>
-                    <p style='font-size: 14px; color: #333;'>Email: ".$visitor_email."</p>
+                    <p style='font-size: 14px; color: #333;'>Date: ".$date."</p>
                 </td>
                 </tr>
                 

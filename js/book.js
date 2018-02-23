@@ -9,9 +9,9 @@
 
         //get input field values
         var user_name = $('#name').val();
-        var user_email = $('#email').val();
         var user_phone = $('#phone').val();
         var user_time = $('#time').val();
+        var user_date = $('#date').val();
         var url = "./php_mailer/mail_handler.php"; // the script where you handle the form input.
 
         //simple validation at client's end
@@ -19,10 +19,6 @@
         var proceed = true;
         if (user_name == "" || user_name == " ") {
             $('#name').css('border-color', '#fa225b');
-            proceed = false;
-        }
-        if (user_email == "" || user_name == " ") {
-            $('#email').css('border-color', '#fa225b');
             proceed = false;
         }
         if (user_phone == "" || user_name == " ") {
@@ -33,10 +29,8 @@
             $('#time').css('border-color', '#fa225b');
             proceed = false;
         }
-        var atpos = user_email.indexOf("@");
-        var dotpos = user_email.lastIndexOf(".");
-        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=user_email.length) {
-            $('#email').css('border-color', '#fa225b');
+        if (user_date == "" || user_name == " ") {
+            $('#date').css('border-color', '#fa225b');
             proceed = false;
         }
 
@@ -45,9 +39,9 @@
             //data to be sent to server
             post_data = {
                 'userName': user_name,
-                'userEmail': user_email,
-                'usertime': user_time,
-                'userphone': user_phone
+                'userPhone': user_phone,
+                'userTime': user_time,
+                'userTime': user_date
             };
             //Ajax post data to server
             $.ajax({
