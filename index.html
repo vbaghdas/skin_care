@@ -32,7 +32,7 @@
 		<!-- Responsive CSS -->
         <link rel="stylesheet" href="css/responsive.css">
         <!-- jQueryUI CSS -->
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
         <script src="js/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
@@ -489,7 +489,21 @@
                     .datepicker({
                         // Consistent format with the HTML5 picker
                         dateFormat: 'yy-mm-dd',
-                        minDate: new Date()
+                        minDate: new Date(),
+                        beforeShowDay: function(date) {
+                            var day = date.getDay();
+                            var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+                            var array = ['2018-03-03, 2018-03-17, 2018-03-31'];
+                            if (day == 0 || day == 1 || day == 2 || day == 4){
+                                return [false];
+                            }
+                            else if(array.indexOf(string) != -1){
+                                return [false];
+                            }
+                            else{
+                                return [true];
+                            }
+                        }
                     });
             }
         </script>
