@@ -1108,12 +1108,13 @@ ul.list li:before{
 
 /* Contact/Comment Forms 
 ==================== */
-.form-control, .ui-datepicker{
+.form-control, .form-control[readonly]{
     width: 100%;
     height: 45px;
     color: #888;
     border: 1px solid #ddd;
     border-radius: 0!important;
+    background-color: #fff;
 }
 .comment_form{
     border: 1px solid #ddd;
