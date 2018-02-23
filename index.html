@@ -431,8 +431,8 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
             if (!Modernizr.touch || !Modernizr.inputtypes.date) {
-                $('input[type=date]')
-                    .attr('type', 'text')
+                $('#date')
+                    // .attr('type', 'text')
                     .datepicker({
                         // Consistent format with the HTML5 picker
                         dateFormat: 'yy-mm-dd',
