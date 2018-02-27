@@ -1,5 +1,5 @@
 /*
-	Barber Shop Theme Scripts
+	Scripts
 */
 
 (function($){ "use strict";
@@ -31,7 +31,11 @@
         $(".nav a").on("click", function(){
             $(".nav").find(".active").removeClass("active");
             $(this).parent().addClass("active");
-         });
+        });
+
+        $(".navbar li a, .navbar h2").click(function(event) {
+            $(".navbar-collapse").collapse('hide');
+        });
     });
              
 /*=========================================================================
