@@ -33,8 +33,8 @@
             $(this).parent().addClass("active");
         });
 
-        $(".nav a").click(function(event) {
-            $(".slicknav_nav").attr('aria-hidden', true);
+        $(".navbar li a").click(function(event) {
+            $(".slicknav_nav").attr('aria-hidden', 'true');
         });
     });
              
